@@ -37,6 +37,12 @@ function draw(){
 
     background(backGroundIMG);
     spaceShip.handlePlayerControls();
+    
+    for(var i = 0; i < bulletGroup.length; i++){
+        if(bulletGroup.get(i).y <= 15){
+            bulletGroup.get(i).destroy();
+        }
+    }
 
     if(gameState == 2){
         textSize(69);
